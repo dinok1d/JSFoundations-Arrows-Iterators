@@ -4,12 +4,13 @@
  * - Accepts an array
  * - Logs every element of the array
  ************************************/
- const logger = function (array) {
-  array.forEach((element) => {
-    console.log(element);
-  });
-};
-
+//  const logger = function (array) {
+//   array.forEach((element) => {
+//     console.log(element);
+//   });
+// };
+ const logger =(array) => array.forEach((element) => console.log(element));
+//  same as the above line
 /*************************************
  * toCelsius(temperatures)
  *
@@ -28,21 +29,24 @@ const toCelsius = function (temperatures) {
   });
   return tempCel;
 };
-
+//  const toCelsius = (temperatures) => temperatures.map(elements) => (element - 32) * (5/9));
 /**************************************
+ * 
  * hottestDays(temperatures, threshhold)
  *
  * - Accepts an array of temperatures
  * - Accepts a threshhold temperature
  * - Returns an array of temperatures
  *   that exceed the threshhold
- ***************************************/
-const hottestDays = function (temperatures, threshhold) {
-  const filteredTemp = temperatures.filter((element) => {
-    return element > threshhold;
-  });
-  return filteredTemp;
-}
+//  ***************************************/
+// const hottestDays = function (temperatures, threshhold) {
+//   const filteredTemp = temperatures.filter((element) => {
+//     return element > threshhold;
+//   });
+//   return filteredTemp;
+// }
+const hottestdays = (tempperatures,threshhold) => tempatures.filter((element) => element > threshhold);
+
 /******************************************
  * logHottestDays(temperatures, threshhold)
  *
@@ -57,12 +61,11 @@ const hottestDays = function (temperatures, threshhold) {
  * hint: you can combine
  *       all previous functions
  *******************************************/
-const logHottestDays = function (temperatures, threshhold) {
-  const filteredTemperatures = hottestDays(temperatures, threshhold);
-  const filteredTempCel = toCelsius(filteredTemperatures);
-  logger(filteredTempCel);
-};
-
+// const logHottestDays = function (temperatures, threshhold) {
+//   const filteredTemperatures = hottestDays(temperatures, threshhold);
+//   const filteredTempCel = toCelsius(filteredTemperatures);
+//   logger(filteredTempCel);
+// };
 /* Uncomment the following lines to test your code... */
 
 // logger([1, 2, 3, 4, 5, 6, 7]);
